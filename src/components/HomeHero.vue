@@ -6,7 +6,7 @@
                 {{ dynamicText }}
                </span> 
             </p>
-            <span>
+            <span style=" position: relative; z-index: 10000 !important;">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, magnam. Aspernatur iste quidem exercitationem maiores atque totam molestias, saepe minima esse consectetur reiciendis vitae. Nisi corporis neque voluptates officia! Sequi!
                </span>
             <div class="flex gap-6 mt-8">

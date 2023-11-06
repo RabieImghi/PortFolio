@@ -20,22 +20,42 @@
     </div>
     
   </header>
-
+  <div id="cursor" :style="cursorStyle">
+     <img src="../assets/image/cursor.gif" style="height: 600px; rotate: 90deg; opacity: 0.2; "  alt="">
+  </div>
 </template>
+<style>
+body{
+  overflow: hidden;
+}
+</style>
+
 <script>
 export default {
   data() {
     return {
       darkMode: localStorage.getItem('darkMode') === 'true',
       isOpen: true,
+      cursorStyle: {
+          position : 'absolute',
+          width: '250px',
+          height: '250px',
+          top: '0px',
+          left: '0px',
+      }
     };
   },
   created() {
     if (this.darkMode) {
       document.documentElement.classList.add('dark');
     }
+    document.documentElement.addEventListener('mousemove', this.handleMouseMove);
   },
   methods: {
+    handleMouseMove(e) {
+      this.cursorStyle.top = e.pageY -300  + 'px';
+      this.cursorStyle.left = e.pageX-100  + 'px';
+    },
     toggleDarkMode() {
       this.darkMode = !this.darkMode;
       if (this.darkMode) {

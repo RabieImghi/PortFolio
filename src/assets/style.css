@@ -22,6 +22,11 @@
     height: calc( 100vh - 100px);
     transition: 0.5s;
 }
+header nav, header .logo, header .dark-mod{
+    position: relative;
+    z-index: 1000000 !important;
+    background: transparent;
+}
 .dark #homeHero{
     background-color: #191919;
     color: white;
@@ -52,7 +57,10 @@
 header .mnMobile{
     display: none;
 }
-
+.text_hello_parent{
+    position: relative;
+    z-index: 10000 !important;
+}
 @media screen and (max-width : 1200px) {
     header .menu_pc{
         display: none;

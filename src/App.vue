@@ -11,7 +11,7 @@ export default {
   name: 'App',
   components: {
     HomeHeader,
-    HomeHero
+    HomeHero,
   }
 }
 </script>
