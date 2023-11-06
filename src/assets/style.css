@@ -10,3 +10,120 @@
 .-webkit-background-clip{
     -webkit-background-clip: text;
 }
+@keyframes bouncee {
+0%, 100% {
+    transform: translateY(-10px);
+}
+50% {
+    transform: translateY(0);
+}
+}
+#homeHero{
+    height: calc( 100vh - 100px);
+    transition: 0.5s;
+}
+.dark #homeHero{
+    background-color: #191919;
+    color: white;
+}
+.dark #homeHero button{
+    background-color: #fff;
+    color: #000;
+}
+#homeHero button{
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+#homeHero p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url('../assets/image/back-text-dark.jpg');
+}
+
+#homeHero .dark .p span {
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.97);
+}
+#homeHero .dark button{
+    color: black;
+    background-color: white;
+}
+#homeHero .text_hello_parent{
+    height: 40vh;
+}
+header .mnMobile{
+    display: none;
+}
+
+@media screen and (max-width : 1200px) {
+    header .menu_pc{
+        display: none;
+    }
+    header .mnMobile{
+        display: block;
+    }
+    #homeHero{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 10px;
+    }
+    #homeHero button{
+        font-size: 12px;
+        width: 150px ;
+        padding: 10px 10px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    #homeHero .hello_text{
+        font-size: 220%;
+    }
+    #homeHero .text_hello_parent{
+        height: 30vh;
+    }
+    #homeHero .my_photo img{
+        width: 100%;
+    }
+    header .logo{
+        width: 15%;
+    }
+    header {
+        padding: 5px !important;
+    }
+    header .menu_mobil li{
+        color: black !important;
+    }
+    header .menu_mobil{
+        width: 150px;
+        display: grid !important;
+        position: absolute;
+        right: 10px;
+        top: 80px;
+        place-items: center;
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        box-shadow: 0px 0px 20px rgba(26, 26, 26, 0.487);
+    }
+}
+@media screen and (max-width : 515px) {
+    #homeHero{
+        padding: 6px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    #homeHero .hello_text{
+        font-size: 30px;
+    }
+    #homeHero .text_hello_parent{
+        height: 10vh;
+    }
+    #homeHero .my_photo img{
+        width: 80%;
+    }
+    header .logo{
+        width: 30%;
+    }
+    
+    
+}

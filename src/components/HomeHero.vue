@@ -1,39 +1,51 @@
 <template>
-    <section id="homeHero" class="flex justify-between p-20 ">
-        <div class="about_me" style="width: 50%;">
-            <p class="text-9xl bg-cover bg-clip-text -webkit-background-clip text-transparent">
-               <span class="text-stroke">HELLO, I'M RABIE. I'M A FULL-STACK WEB DEVELOPER</span> 
+    <section id="homeHero" class="grid grid-cols-2 pt-10 p-20">
+        <div class="about_me">
+            <p class="text_hello_parent bg-cover bg-clip-text -webkit-background-clip text-transparent">
+               <span class="text-6xl text-stroke hello_text">
+                {{ dynamicText }}
+               </span> 
             </p>
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, magnam. Aspernatur iste quidem exercitationem maiores atque totam molestias, saepe minima esse consectetur reiciendis vitae. Nisi corporis neque voluptates officia! Sequi!
+               </span>
+            <div class="flex gap-6 mt-8">
+                <button class="p-4 pl-8 pr-8 bg-black text-white drop-shadow-xl font-bold">DOWNLOAD CV</button>
+                <button class="p-4 pl-8 pr-8 bg-black text-white drop-shadow-xl font-bold">CONTACT ME</button>
+            </div>
         </div>
-        <div class="my_photo overflow-hidden">
-            <img class="mr-10" style="width: 97%; animation: spin 5s linear infinite;" src="../assets/image/CYR.png" alt="">
-            <img src="../assets/image/photo.png"  class="relative bottom-120 left-20 rounded-full " alt="">
+        <div class="my_photo overflow-hidden" style="display: flex; justify-content: center; align-items: start;">
+            <img style="animation: bouncee 3s infinite;" src="../assets/image/CYR.png" alt="">
         </div>
     </section>
 </template>
-<style>
-#homeHero{
-    height: calc( 100vh - 100px);
-    transition: 0.5s;
-}
-.dark #homeHero{
-    background-color: #191919;
-    color: white;
-}
-p{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-image: url('../assets/image/back-text-dark.jpg');
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.dark .p span {
-    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.97);
-}
-
-</style>
+<script>
+export default {
+    data() {
+        return {
+            dynamicText: '',
+        };
+    },
+    mounted() {
+        this.animateText();
+        this.attachCursorListener();
+    },
+    methods: {
+        animateText() {
+        const originalText = "HELLO, I'M RABIE. I'M A FULL-STACK WEB DEVELOPER";
+        let index = 0;
+        const typeText = () => {
+            this.dynamicText = originalText.slice(0, index + 1);
+            index++;
+            if (index <= originalText.length) {
+            setTimeout(typeText, 200); 
+            } else {
+            index = 0;
+            setTimeout(typeText, 1000); 
+            }
+        };
+        typeText();
+        },
+  },
+};
+</script>
