@@ -1,6 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
 .text-stroke{
     -webkit-text-stroke: 2px rgba(0, 0, 0, 0.47);
 }
@@ -43,7 +45,32 @@ header nav, header .logo, header .dark-mod{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-image: url('../assets/image/back-text-dark.jpg');
 }
-
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 40px;
+}
+.waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-transform: uppercase;
+    animation: waviy 2s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+.dark .waviy span {
+      color: #fff;
+}
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+}
+  
 #homeHero .dark .p span {
     -webkit-text-stroke: 2px rgba(0, 0, 0, 0.97);
 }
@@ -62,6 +89,9 @@ header .mnMobile{
     z-index: 10000 !important;
 }
 @media screen and (max-width : 1200px) {
+    .waviy {
+        font-size: 30px;
+    }
     header .menu_pc{
         display: none;
     }
@@ -113,6 +143,9 @@ header .mnMobile{
     }
 }
 @media screen and (max-width : 515px) {
+    .waviy {
+        font-size: 25px;
+    }
     #homeHero{
         padding: 6px;
         display: flex;

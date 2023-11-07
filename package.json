@@ -11,6 +11,8 @@
     "autoprefixer": "^10.4.16",
     "boxicons": "^2.1.4",
     "core-js": "^3.8.3",
+    "gsap": "^3.12.2",
+    "ldrs": "^1.0.1",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-preset-env": "^9.3.0",

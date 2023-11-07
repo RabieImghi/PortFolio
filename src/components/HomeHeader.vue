@@ -21,7 +21,7 @@
     
   </header>
   <div id="cursor" :style="cursorStyle">
-    
+    <l-trefoil size="500"  speed="2.5" :color="darkMode ? 'white' : 'black'" stroke="6" stroke-length="0.49" bg-opacity="0.1" ></l-trefoil>
   </div>
 </template>
 <style>
@@ -29,18 +29,18 @@ body{
   overflow: hidden;
 }
 #cursor{
-  background-color: rgba(0, 0, 0, 0.156);
-  border-radius: 50%;
-  box-shadow: 1px 1px 300px 200px rgba(0, 0, 0, 0.205);
-  
-}
-.dark #cursor{
-  background-color: rgba(255, 255, 255, 0.024);
-  box-shadow: 1px 1px 300px 200px rgba(255, 255, 255, 0.040);
+  opacity: 0.1;
+  rotate: 25deg;
 }
 </style>
 
-<script>
+
+<script >
+import { trefoil } from 'ldrs'
+
+trefoil.register()
+
+import 'ldrs/quantum'
 export default {
   data() {
     return {
@@ -63,8 +63,8 @@ export default {
   },
   methods: {
     handleMouseMove(e) {
-      this.cursorStyle.top = e.pageY-50  + 'px';
-      this.cursorStyle.left = e.pageX-50  + 'px';
+      this.cursorStyle.top = e.pageY-350  + 'px';
+      this.cursorStyle.left = e.pageX-150  + 'px';
     },
     toggleDarkMode() {
       this.darkMode = !this.darkMode;
@@ -88,7 +88,6 @@ export default {
   },
 };
 </script>
-
 <style>
 .desktop-menu {
   display: none; /* Masquer la liste par défaut */
