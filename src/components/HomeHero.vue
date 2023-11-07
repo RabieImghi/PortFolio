@@ -44,18 +44,13 @@
         </div>
         <div class="my_photo overflow-hidden" style="display: grid ; justify-content: center; align-items: start;">
             <img style="animation: bouncee 3s infinite;" src="../assets/image/CYR.png" alt="">
-            
         </div>
     </section>
-    <div class="apbsolut" style="background-color: red;">
-        hhhjrkegnerveroi    
+    <div class="fixed bottom-10 right-10">
+        <div class="github">Gitub</div>  
     </div>
 </template>
-<style>
 
-
-
-</style>
 <script>
 export default {
     data() {

@@ -21,24 +21,27 @@
     
   </header>
   <div id="cursor" :style="cursorStyle">
-    <l-trefoil size="500"  speed="2.5" :color="darkMode ? 'white' : 'black'" stroke="6" stroke-length="0.49" bg-opacity="0.1" ></l-trefoil>
-  </div>
+   
+<l-ripples
+  size="700"
+  speed="2" 
+  :color="darkMode ? 'white' : 'black'" 
+></l-ripples></div>
 </template>
 <style>
 body{
   overflow: hidden;
 }
 #cursor{
-  opacity: 0.1;
+  opacity: 0.06;
   rotate: 25deg;
 }
 </style>
 
 
 <script >
-import { trefoil } from 'ldrs'
-
-trefoil.register()
+import { ripples } from 'ldrs'
+ripples.register()
 
 import 'ldrs/quantum'
 export default {
@@ -63,8 +66,8 @@ export default {
   },
   methods: {
     handleMouseMove(e) {
-      this.cursorStyle.top = e.pageY-350  + 'px';
-      this.cursorStyle.left = e.pageX-150  + 'px';
+      this.cursorStyle.top = e.pageY-430  + 'px';
+      this.cursorStyle.left = e.pageX-200  + 'px';
     },
     toggleDarkMode() {
       this.darkMode = !this.darkMode;
