@@ -21,12 +21,22 @@
     
   </header>
   <div id="cursor" :style="cursorStyle">
-     <img src="../assets/image/cursor.gif" style="height: 600px; rotate: 90deg; opacity: 0.2; "  alt="">
+    
   </div>
 </template>
 <style>
 body{
   overflow: hidden;
+}
+#cursor{
+  background-color: rgba(0, 0, 0, 0.156);
+  border-radius: 50%;
+  box-shadow: 1px 1px 300px 200px rgba(0, 0, 0, 0.205);
+  
+}
+.dark #cursor{
+  background-color: rgba(255, 255, 255, 0.024);
+  box-shadow: 1px 1px 300px 200px rgba(255, 255, 255, 0.040);
 }
 </style>
 
@@ -38,8 +48,8 @@ export default {
       isOpen: true,
       cursorStyle: {
           position : 'absolute',
-          width: '250px',
-          height: '250px',
+          width: '100px',
+          height: '100px',
           top: '0px',
           left: '0px',
       }
@@ -53,8 +63,8 @@ export default {
   },
   methods: {
     handleMouseMove(e) {
-      this.cursorStyle.top = e.pageY -300  + 'px';
-      this.cursorStyle.left = e.pageX-100  + 'px';
+      this.cursorStyle.top = e.pageY-50  + 'px';
+      this.cursorStyle.left = e.pageX-50  + 'px';
     },
     toggleDarkMode() {
       this.darkMode = !this.darkMode;
