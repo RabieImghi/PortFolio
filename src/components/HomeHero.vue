@@ -50,20 +50,15 @@
         </div>
     </section>
     
-    <CursorEffect/>
 </template>
 
 <script>
-import CursorEffect from './CursorEffect.vue'
 
 export default {
     data() {
         return {
             dynamicText: '',
         };
-    },
-    components: {
-        CursorEffect,
     },
     mounted() {
         this.animateText();

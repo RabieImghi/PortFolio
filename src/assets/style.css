@@ -20,15 +20,14 @@
     transform: translateY(0);
 }
 }
-#homeHero{
-    height: calc( 100vh - 100px);
-    transition: 0.5s;
-}
 header nav, header .logo, header .dark-mod{
     z-index: 1000000 !important;
     background: transparent;
 }
-.dark #homeHero{
+body{
+    transition: 0.5s;
+}
+.dark body{
     background-color: #191919;
     color: white;
 }
@@ -78,7 +77,7 @@ header nav, header .logo, header .dark-mod{
     background-color: white;
 }
 #homeHero .text_hello_parent{
-    height: 40vh;
+    height: 400px;
 }
 header .mnMobile{
     display: none;
@@ -88,6 +87,7 @@ header .mnMobile{
     z-index: 10000 !important;
 }
 @media screen and (max-width : 1200px) {
+    
     #cursor{
         display: none !important;
     }
@@ -116,7 +116,7 @@ header .mnMobile{
         font-size: 220%;
     }
     #homeHero .text_hello_parent{
-        height: 30vh;
+        height: 300px;
     }
     #homeHero .my_photo img{
         width: 100%;
@@ -145,6 +145,12 @@ header .mnMobile{
     }
 }
 @media screen and (max-width : 515px) {
+    .my_photo{
+        display: none !important;
+    }
+    nav ul li.text-xl{
+        font-size: 15px;
+    }
     .mobil_text{
         margin-top: 30px;
     }
@@ -162,7 +168,7 @@ header .mnMobile{
         font-size: 30px;
     }
     #homeHero .text_hello_parent{
-        height: 10vh;
+        height: 200px;
     }
     #homeHero .my_photo img{
         width: 80%;

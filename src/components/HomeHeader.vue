@@ -1,8 +1,8 @@
 <template>
   <header class="flex justify-between items-center p-20 pb-5 pt-5" >
     <div class="logo">
-      <img id="logoo" v-if="show" src="../assets/image/Logo-dark.png">
-      <img id="logoo" v-else src="../assets/image/logo-white.png">
+      <img id="logoo" v-if="darkMode" src="../assets/image/logo-white.png">
+      <img id="logoo" v-else src="../assets/image/Logo-dark.png">
       <!-- <img class="w-32" id="logoo" :class="{ 'invert-colors': darkMode }" src="../assets/image/Logo-dark.png" v-if="!show">
       <img class="w-32" id="logoo" :class="{ 'invert-colors': darkMode }" src="../assets/image/logo-white.png" v-else> -->
     </div>
@@ -72,7 +72,6 @@ export default {
   }
 }
 header {
-  transition: 0.5s;
   height: 100px;
 }
 .dark header{
