@@ -8,10 +8,10 @@
     </div>
     <nav>
       <ul id="nav_hearder" class="menu_mobil menu_pc flex gap-10">
-        <li class="text-gray-500 text-xl font-bold">HOME</li>
-        <li class="text-gray-500 text-xl font-bold">HOME</li>
-        <li class="text-gray-500 text-xl font-bold">HOME</li>
-        <li class="text-gray-500 text-xl font-bold">HOME</li>
+        <li class="text-gray-500 text-xl font-bold"><a href="/"> HOME</a></li>
+        <li class="text-gray-500 text-xl font-bold"><a href="/AboutMe">ABOUT ME</a></li>
+        <li class="text-gray-500 text-xl font-bold"><a href="/PortFolio">PORTFOLIO</a></li>
+        <li class="text-gray-500 text-xl font-bold"><a href="/ContactMe">CONTACT ME</a></li>
       </ul>
     </nav>
     <div class="dark-mod flex">
@@ -20,13 +20,7 @@
     </div>
     
   </header>
-  <div id="cursor" :style="cursorStyle">
-   
-<l-ripples
-  size="700"
-  speed="2" 
-  :color="darkMode ? 'white' : 'black'" 
-></l-ripples></div>
+
 </template>
 <style>
 body{
@@ -40,35 +34,19 @@ body{
 
 
 <script >
-import { ripples } from 'ldrs'
-ripples.register()
-
-import 'ldrs/quantum'
 export default {
   data() {
     return {
       darkMode: localStorage.getItem('darkMode') === 'true',
       isOpen: true,
-      cursorStyle: {
-          position : 'absolute',
-          width: '100px',
-          height: '100px',
-          top: '0px',
-          left: '0px',
-      }
     };
   },
   created() {
     if (this.darkMode) {
       document.documentElement.classList.add('dark');
     }
-    document.documentElement.addEventListener('mousemove', this.handleMouseMove);
   },
   methods: {
-    handleMouseMove(e) {
-      this.cursorStyle.top = e.pageY-430  + 'px';
-      this.cursorStyle.left = e.pageX-200  + 'px';
-    },
     toggleDarkMode() {
       this.darkMode = !this.darkMode;
       if (this.darkMode) {
