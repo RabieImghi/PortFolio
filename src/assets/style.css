@@ -145,6 +145,9 @@ header .mnMobile{
     }
 }
 @media screen and (max-width : 515px) {
+    body{
+        transition: 0s;
+    }
     .my_photo{
         display: none !important;
     }
@@ -152,7 +155,7 @@ header .mnMobile{
         font-size: 15px;
     }
     .mobil_text{
-        margin-top: 30px;
+        margin-top: 10px;
     }
     .waviy {
         font-size: 20px;
@@ -168,7 +171,7 @@ header .mnMobile{
         font-size: 30px;
     }
     #homeHero .text_hello_parent{
-        height: 200px;
+        height: 120px;
     }
     #homeHero .my_photo img{
         width: 80%;
