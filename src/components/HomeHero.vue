@@ -14,32 +14,35 @@
                 <button class="p-4 pl-8 pr-8 bg-black text-white drop-shadow-xl font-bold">CONTACT ME</button>
             </div>
             <div class="waviy mt-20">
-                <span style="--i:1">F</span>
-                <span style="--i:2">U</span>
-                <span style="--i:3">N</span>
-                <span style="--i:4">C</span>
-                <span style="--i:5">T</span>
-                <span style="--i:6">I</span>
-                <span style="--i:7">O</span>
-                <span style="--i:8">N</span>
-                <span style="--i:9">_</span>
-                <span style="--i:9; color:red;" >C</span>
-                <span style="--i:10; color:red;">O</span>
-                <span style="--i:11; color:red;">D</span>
-                <span style="--i:12; color:red;">I</span>
-                <span style="--i:13; color:red;">N</span>
-                <span style="--i:14; color:red;">G</span>
-                <span style="--i:15; color:red;">()</span>
-                <span style="--i:15">{</span>
-                <br>
-                <span class="pl-20" style="--i:17;color:green;" >C</span>
-                <span style="--i:18; color:green;">O</span>
-                <span style="--i:19; color:green;">D</span>
-                <span style="--i:20; color:green;">I</span>
-                <span style="--i:21; color:green;">N</span>
-                <span style="--i:22; color:green;">G</span>          
-                <span style="--i:23; color:green;">();</span> <br>
-                <span style="--i:24">};</span>
+                <div>
+                    <span style="--i:1">F</span>
+                    <span style="--i:2">U</span>
+                    <span style="--i:3">N</span>
+                    <span style="--i:4">C</span>
+                    <span style="--i:5">T</span>
+                    <span style="--i:6">I</span>
+                    <span style="--i:7">O</span>
+                    <span style="--i:8">N</span>
+                    <span style="--i:9">_</span>
+                    <span style="--i:9; color:red;" >C</span>
+                    <span style="--i:10; color:red;">O</span>
+                    <span style="--i:11; color:red;">D</span>
+                    <span style="--i:12; color:red;">I</span>
+                    <span style="--i:13; color:red;">N</span>
+                    <span style="--i:14; color:red;">G</span>
+                    <span style="--i:15; color:red;">()</span>
+                    <span style="--i:15">{</span>
+                </div>
+                <div class="mobil_text">
+                    <span class="pl-20" style="--i:17;color:green;" >C</span>
+                    <span style="--i:18; color:green;">O</span>
+                    <span style="--i:19; color:green;">D</span>
+                    <span style="--i:20; color:green;">I</span>
+                    <span style="--i:21; color:green;">N</span>
+                    <span style="--i:22; color:green;">G</span>          
+                    <span style="--i:23; color:green;">();</span>
+                </div>
+                <span class="mobil_text" style="--i:24">};</span>
             </div>
         </div>
         <div class="my_photo overflow-hidden" style="display: grid ; justify-content: center; align-items: start;">
@@ -49,18 +52,23 @@
     <div class="fixed bottom-10 right-10">
         <div class="github">Gitub</div>  
     </div>
+    <CursorEffect/>
 </template>
 
 <script>
+import CursorEffect from './CursorEffect.vue'
+
 export default {
     data() {
         return {
             dynamicText: '',
         };
     },
+    components: {
+        CursorEffect,
+    },
     mounted() {
         this.animateText();
-        this.attachCursorListener();
     },
     methods: {
         animateText() {

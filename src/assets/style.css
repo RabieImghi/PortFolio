@@ -88,6 +88,9 @@ header .mnMobile{
     z-index: 10000 !important;
 }
 @media screen and (max-width : 1200px) {
+    #cursor{
+        display: none !important;
+    }
     .waviy {
         font-size: 30px;
     }
@@ -142,6 +145,9 @@ header .mnMobile{
     }
 }
 @media screen and (max-width : 515px) {
+    .mobil_text{
+        margin-top: 30px;
+    }
     .waviy {
         font-size: 20px;
     }

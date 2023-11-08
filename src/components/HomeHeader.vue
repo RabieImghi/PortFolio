@@ -7,7 +7,7 @@
       <img class="w-32" id="logoo" :class="{ 'invert-colors': darkMode }" src="../assets/image/logo-white.png" v-else> -->
     </div>
     <nav>
-      <ul id="nav_hearder" class="menu_mobil menu_pc flex gap-10">
+      <ul id="nav_hearder" class="menu_pc flex gap-10">
         <li class="text-gray-500 text-xl font-bold"><a href="/"> HOME</a></li>
         <li class="text-gray-500 text-xl font-bold"><a href="/AboutMe">ABOUT ME</a></li>
         <li class="text-gray-500 text-xl font-bold"><a href="/PortFolio">PORTFOLIO</a></li>
@@ -22,18 +22,10 @@
   </header>
 
 </template>
-<style>
-body{
-  overflow: hidden;
-}
-#cursor{
-  opacity: 0.06;
-  rotate: 25deg;
-}
-</style>
 
 
 <script >
+
 export default {
   data() {
     return {

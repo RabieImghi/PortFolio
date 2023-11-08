@@ -1,16 +1,17 @@
 <template>
-  <div id="cursor" :style="cursorStyle">
+  <div style="overflow: hidden; width: 100%; height: 100%; position: absolute; inset: 0;">
+    <div id="cursor" :style="cursorStyle">
       <l-ripples
           size="700"
           speed="2" 
-          :color="darkMode ? 'white' : 'black'" 
+          color="black" 
       ></l-ripples>
+    </div>
   </div>
+  
 </template>
 <style>
-body{
-  overflow: hidden;
-}
+
 #cursor{
   opacity: 0.06;
   rotate: 25deg;
