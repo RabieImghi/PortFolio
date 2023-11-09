@@ -49,9 +49,22 @@
             <img style="animation: bouncee 3s infinite;" src="../assets/image/CYR.png" alt="">
         </div>
     </section>
+    <div class=" contactme flex items-center flex-wrap gap-10 justify-center mt-5">
+        <div class="relative p-3 rounded-1 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(100%+16px)] hover:before:w-[calc(100%+16px)] hover:after:h-[calc(100%+16px)] hover:after:w-[calc(100%+16px)]">
+            <img src="../assets/image/ithub.gif" class="rounded-full w-10" alt="">
+        </div>
+        <div class="relative p-3 rounded-1 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(100%+16px)] hover:before:w-[calc(100%+16px)] hover:after:h-[calc(100%+16px)] hover:after:w-[calc(100%+16px)]">
+            <img src="../assets/image/linkedin.gif" class=" w-10" alt="">
+        </div>
+        <div class="relative p-3 rounded-1 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(100%+16px)] hover:before:w-[calc(100%+16px)] hover:after:h-[calc(100%+16px)] hover:after:w-[calc(100%+16px)]">
+            <img src="../assets/image/gmail.gif" class=" w-10" alt="">
+        </div>
+        <div class="relative p-3 rounded-1 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(100%+16px)] hover:before:w-[calc(100%+16px)] hover:after:h-[calc(100%+16px)] hover:after:w-[calc(100%+16px)]">
+            <img src="../assets/image/whatsapp.gif" class="rounded-full w-10" alt="">
+        </div>
+    </div>
     
 </template>
-
 <script>
 
 export default {

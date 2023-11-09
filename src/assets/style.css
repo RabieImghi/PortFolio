@@ -179,6 +179,9 @@ header .mnMobile{
     header .logo{
         width: 30%;
     }
+    .contactme.mt-5{
+        margin-top: 120px;
+    }
     
     
 }

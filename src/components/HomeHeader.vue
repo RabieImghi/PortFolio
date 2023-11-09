@@ -8,10 +8,10 @@
     </div>
     <nav>
       <ul id="nav_hearder" class="menu_pc flex gap-10">
-        <li class="text-gray-500 text-xl font-bold"><a href="/"> HOME</a></li>
-        <li class="text-gray-500 text-xl font-bold"><a href="/AboutMe">ABOUT ME</a></li>
-        <li class="text-gray-500 text-xl font-bold"><a href="/PortFolio">PORTFOLIO</a></li>
-        <li class="text-gray-500 text-xl font-bold"><a href="/ContactMe">CONTACT ME</a></li>
+        <li class="text-gray-500 text-xl font-bold"><RouterLink class="linkHeader" to="/">HOME</RouterLink> </li>
+        <li class="text-gray-500 text-xl font-bold"><RouterLink class="linkHeader" to="/AboutMe">ABOUT ME</RouterLink></li>
+        <li class="text-gray-500 text-xl font-bold"><RouterLink class="linkHeader" to="/PortFolio">PORTFOLIO</RouterLink></li>
+        <li class="text-gray-500 text-xl font-bold"><RouterLink class="linkHeader" to="/ContactMe">CONTACT ME</RouterLink></li>
       </ul>
     </nav>
     <div class="dark-mod flex">
@@ -22,7 +22,19 @@
   </header>
 
 </template>
+<style>
+.linkHeader{
+  padding: 10px;
+  border-radius: 8px;
+}
+.dark .router-link-active{
+  border: 1px solid white;
+}
+.router-link-active{
+  border: 1px solid black;
+}
 
+</style>
 
 <script >
 
