@@ -7,8 +7,8 @@
                </span> 
             </p>
             <span style=" position: relative; z-index: 10000 !important;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, magnam. Aspernatur iste quidem exercitationem maiores atque totam molestias, saepe minima esse consectetur reiciendis vitae. Nisi corporis neque voluptates officia! Sequi!
-               </span>
+                HELLO?
+            </span>
             <div class="flex gap-6 mt-8">
                 <button class="p-4 pl-8 pr-8 bg-black text-white drop-shadow-xl font-bold">DOWNLOAD CV</button>
                 <button class="p-4 pl-8 pr-8 bg-black text-white drop-shadow-xl font-bold">CONTACT ME</button>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="my_photo overflow-hidden" style="display: grid ; justify-content: center; align-items: start;">
-            <img style="animation: bouncee 3s infinite;" src="../assets/image/CYR.png" alt="">
+            <img style="animation: bouncee 3s infinite;" src="../assets/image/giphy.gif" alt="">
         </div>
     </section>
     <div class=" contactme flex items-center flex-wrap gap-10 justify-center mt-5">

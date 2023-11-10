@@ -148,9 +148,7 @@ header .mnMobile{
     body{
         transition: 0s;
     }
-    .my_photo{
-        display: none !important;
-    }
+
     nav ul li.text-xl{
         font-size: 15px;
     }
